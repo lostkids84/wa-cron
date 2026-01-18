@@ -1,9 +1,10 @@
 name: Cron Send Reminder
 
+# Jadwal eksekusi
 on:
   schedule:
-    - cron: "30 6 * * *"  # setiap jam 13:30 WIB (06:30 UTC)
-  workflow_dispatch:
+    - cron: "30 6 * * *"  # Jam 13:30 WIB (06:30 UTC)
+  workflow_dispatch:      # Bisa juga dijalankan manual lewat GitHub
 
 jobs:
   call-cron-url:
