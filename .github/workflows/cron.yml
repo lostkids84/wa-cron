@@ -1,0 +1,15 @@
+name: Cron Send Reminder
+
+on:
+  schedule:
+    - cron: "0 * * * *"  # tiap jam (UTC)
+  workflow_dispatch:
+
+jobs:
+  call-cron-url:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call reminder URL
+        run: |
+          curl -L --max-time 30 https://account-kerja.great-site.net/cron/send_reminder
