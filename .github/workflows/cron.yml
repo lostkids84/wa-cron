@@ -2,7 +2,7 @@ name: Cron Send Reminder
 
 on:
   schedule:
-    - cron: "0 * * * *"  # tiap jam (UTC)
+    - cron: "30 6 * * *"  # setiap jam 13:30 WIB (06:30 UTC)
   workflow_dispatch:
 
 jobs:
